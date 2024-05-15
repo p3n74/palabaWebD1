@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../Users/nicasamanthaantiporta/Desktop/School/Code in C"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../../Users/nicasamanthaantiporta/Documents"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"set.h": "c",
+			"stack.h": "c"
+		}
+	}
+}
