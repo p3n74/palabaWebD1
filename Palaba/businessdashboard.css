@@ -1,0 +1,70 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.dashboardbox {
+
+    position: relative;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 50vh; 
+    background: rgba(231, 230, 221, 1);
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
+}
+
+.crudContainer {
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-field {
+    padding: 10px;
+    margin-right: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button-group {
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.update-btn {
+    background-color: #008CBA;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+
