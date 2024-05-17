@@ -58,12 +58,13 @@ body {
   .regbox {
     position: absolute;
     margin-top: 50px; 
-    width: 89%;
+    
+    width: 50%;
     height: 550px;
     background: rgba(231, 230, 221, 1);
     border-radius: 20px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-left: 5%;
+    margin-left: 25%;
     overflow: visible;
   }
 
@@ -295,6 +296,7 @@ h1 {
 
 
 .sform {
+  width: 600px;
   padding: 20px; 
   overflow: visible;
   margin-bottom: 0;
@@ -430,8 +432,9 @@ body {
 }
 
 .column {
-      flex: 1;
-      padding: 10px;
+      display: flex;
+      align-items: center;
+      margin: auto;
 
 }
 
@@ -482,7 +485,27 @@ font-family: Arial, sans-serif;
 
 }
 
+.businessregisterbutton{
+  
+  margin-left: 30%;
+  width: 150px;
+  height: 50px;
+  color: white;
+  background-color: #0F2043; 
+  border: none;
+  border-radius: 5px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: larger;
+  cursor: pointer;
+  color: #E8C766;
+  text-decoration: none;
+}
 
+.BusinessRegistrationInputBox{
+  height: 20px;
+  width: 20px;
+}
 .row {
   display: flex;
 }
