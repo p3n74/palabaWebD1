@@ -61,7 +61,7 @@ $result = $conn->query($sql);
     <div class="header" id="myHeader"></div>
     <div class="navbar" id="navbar">
         <center>
-            <a href="businesshome.html">Home</a>
+            <a href="home.html">Home</a>
             <a href="busprofile.html">Profile</a>
             <a href="bustrack.html"><strong>Dashboard</strong></a>
         </center>

@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="text" name="BusinessNameInput" placeholder="Business Name"><br>
                     <input type="text" name="BusinessLocationBoxInput" placeholder="Location"><br>
                     <input type="text" name="BusinessPermitNumInput" placeholder="Business Permit No."><br>
-                    <button type="submit" class="businessregisterbutton">Register</button>
+                    <button type="submit" class="businessregisterbutton" href="busdashboard.php">Register</button>
                 </form>
             </div>
         </div>

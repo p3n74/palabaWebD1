@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$username', '$user_fullname', '$email', '$password', '$phonenumber')";
 
     if ($conn->query($sql) === TRUE) {
-        header('Location: userdashboard.html');
+        header('Location: userdashboard.php');
         die();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
