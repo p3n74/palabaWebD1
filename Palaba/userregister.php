@@ -20,7 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$username', '$user_fullname', '$email', '$password', '$phonenumber')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
+        header('Location: index.html');
+        die();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
