@@ -8,7 +8,6 @@ create table users(
     username varchar(255),
     user_fullname varchar(255),
     email varchar(255),
-    address varchar (255),
     password varchar(255),
     phonenumber varchar(11),
 
