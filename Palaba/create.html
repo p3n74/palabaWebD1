@@ -6,6 +6,7 @@
     <link href='https://fonts.googleapis.com/css?family=Just Me Again Down Here' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Palaba</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
         <a href="create.html"><strong>Create and Update</strong></a>
         </center>
     </div>
-        <div class="create"><p class="createtext">Create +</p></div>
+        <button class="create" id="openPopupButton">Create +</p></button>
         <div class="createte"><p class="creatext">➤ Sheen Deguzman   made an inquiry</p>
             <div class="view"><p class="viewtext">View Details</p></div></div>
         <div class="createte"><p class="creatext">➤ Veronica Laude made an inquiry</p>
@@ -29,6 +30,15 @@
          <div class="createte"><p class="creatext">➤ Christopher Mill made an inquiry</p>
                 <div class="view"><p class="viewtext">View Details</p></div></div>
    
-   
+                <div class="popup-overlay" id="popupOverlay">
+                    <div class="popup" id="popup">
+                        <span class="close" id="closePopup">&times;</span>
+                        <div class="popup-content">
+                            <p>Enter username to create</p>
+                            <input type="text" placeholder="Enter Username" id="username">
+                            <button>Create</button>
+                        </div>
+                    </div>
+                </div>
 </body> 
 </html>
