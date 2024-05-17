@@ -380,7 +380,10 @@ h1 {
   color: #0F2043;
 }
 
-.LoginSplash{
+.LoginSplash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: auto;
   height: auto;
   margin: 0 auto;
@@ -388,14 +391,12 @@ h1 {
   position: relative;
 }
 
-#LoginSplashText{
+#LoginSplashText {
   font-family: 'Just Me Again Down Here';
   font-style: normal;
   font-size: 30px;
   color: #0F2043;
-  position: absolute;
   text-align: center;
-  margin-left: 25%;
 }
 
 body {
