@@ -216,6 +216,7 @@ body {
     overflow: visible;
   }
 
+/*log 1 is for the yellow part of the box */
   .log1 {
     height: 60px;
     background: #E8C766;
@@ -336,6 +337,7 @@ h1 {
   text-decoration: none;
   color: #0F2043;
 }
+/* button for custlog and login supposedly */
 .button2 {
   margin-top: 8%;
   margin-left: 8%;
@@ -352,6 +354,8 @@ h1 {
   color: #E8C766;
   text-decoration: none;
 }
+
+/* button for business reg */
 .button3 {
   margin-top: 4%;
   margin-left: 43%;
