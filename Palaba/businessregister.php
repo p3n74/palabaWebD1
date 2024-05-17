@@ -29,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Execute the query
     if ($conn->query($sql) === TRUE) {
+        header("Location: busdashboard.php");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
