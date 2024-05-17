@@ -24,8 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['createTransaction'])) 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         $user_id = $row["user_id"];
-
-        // Insert transaction
         $insertTransactionQuery = "INSERT INTO transactions (store_id, user_id, date_started, status) 
                                    VALUES (1, '$user_id', CURRENT_DATE(), '$status')"; // Assuming store ID is 1
 
@@ -81,6 +79,27 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="businessdashboard.css">
     <title>Palaba</title>
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
 </head>
 
 <body>
