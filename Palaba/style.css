@@ -205,10 +205,10 @@ body {
 
   .loginbox {
     position: absolute;
-    top: 40%;
+    top: 20%;
     left: 50%;
-    width: 573px;
-    height: 241px;
+    width: 600px;
+    height: 500px;
     background: rgba(231, 230, 221, 1);
     border-radius: 20px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
@@ -291,22 +291,7 @@ h1 {
   font-size: 47px;
 }
 
-.HomeLoginBoxButton {
-  margin-top: 68px;
-  margin-left: 89px;
-  width: 150px;
-  height: 50px;
-  color: white;
-  background-color: #0F2043; 
-  border: none;
-  border-radius: 5px;
-  font-family: 'Inter';
-  font-style: normal;
-  font-size: larger;
-  cursor: pointer;
-  color: #E8C766;
-  text-decoration: none;
-}
+
 
 
 .sform {
@@ -380,24 +365,65 @@ h1 {
   color: #0F2043;
 }
 
+.HomeLoginBoxButton {
+  width: 150px;
+  height: 50px;
+  background-color: #0F2043; 
+  border: none;
+  border-radius: 5px;
+  font-family: 'Inter';
+  font-size: larger;
+  cursor: pointer;
+  color: #E8C766;
+  text-decoration: none;
+}
+
+.HomeLoginBoxUserRegistrationButton {
+  width: 250px;
+  height: 50px;
+  background-color: #0F2043; 
+  border: none;
+  border-radius: 5px;
+  font-family: 'Inter';
+  font-size: larger;
+  cursor: pointer;
+  color: #E8C766;
+  text-decoration: none;
+}
+
 .LoginSplash {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: auto;
+  width: 100%;
   height: auto;
   margin: 0 auto;
   padding: 10px;
   position: relative;
-}
-
-#LoginSplashText {
-  font-family: 'Just Me Again Down Here';
-  font-style: normal;
-  font-size: 30px;
-  color: #0F2043;
   text-align: center;
 }
+
+#LoginSplashTextH1 {
+  font-family: 'Just Me Again Down Here';
+  font-size: 30px;
+  color: #0F2043;
+}
+
+#LoginSplashTextH2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #0F2043;
+}
+
+.LoginButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
 
 body {
   background-size: cover;
