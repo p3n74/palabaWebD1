@@ -1,3 +1,8 @@
+.table {
+    margin: 0 auto; /* Center the table horizontally */
+    text-align: center; /* Center the content of the table cells */
+    width: 80%; /* Set a width for the table */
+}
 
 .container {
     display: flex;
@@ -6,7 +11,6 @@
 }
 
 .dashboardbox {
-
     position: relative;
     margin-top: 3%;
     margin-left: auto;
@@ -66,5 +70,3 @@
 .btn:hover {
     background-color: #45a049;
 }
-
-
