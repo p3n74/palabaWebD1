@@ -191,6 +191,7 @@ body {
     border-width: 2px;
   }
   .homebox {
+
     position: absolute;
     top: 20%;
     left: 7%;
@@ -199,8 +200,7 @@ body {
     background: rgba(231, 230, 221, 1);
     border-radius: 20px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-right: 30%;
-    
+    z-index: 1;
   }
 
   .loginbox {
@@ -430,7 +430,7 @@ body {
 }
 
 .column {
-  flex: 1;
+      flex: 1;
       padding: 10px;
 
 }
