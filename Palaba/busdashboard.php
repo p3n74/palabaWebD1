@@ -1,7 +1,7 @@
 <?php
-$dbusername = "user2";
+$dbusername = "root";
 $dbhost = "localhost";
-$dbpassword = "password123";
+$dbpassword = "";
 $dbname = "PalabaDB";
 
 // Establish connection
@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['createTransaction'])) {
     $username = $_POST['crudUsernameInput'];
     $status = $_POST['crudOrderStatus'];
-    
+
     // Fetch user ID by username
     $getUserIDQuery = "SELECT user_id FROM users WHERE username = '$username'";
     $result = $conn->query($getUserIDQuery);
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['createTransaction'])) 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         $user_id = $row["user_id"];
-        
+
         // Insert transaction
         $insertTransactionQuery = "INSERT INTO transactions (store_id, user_id, date_started, status) 
                                    VALUES (1, '$user_id', CURRENT_DATE(), '$status')"; // Assuming store ID is 1
@@ -72,6 +72,7 @@ $result = $conn->query($sql);
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -81,6 +82,7 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="businessdashboard.css">
     <title>Palaba</title>
 </head>
+
 <body>
     <img src="images/Vector (1).png" class="des1">
     <div class="header" id="myHeader"></div>
@@ -99,33 +101,32 @@ $result = $conn->query($sql);
                 <div class="log1">
                     <span class="title">Palaba</span>
                 </div>
-            </div>
-
-            <div class="transactiontable-container">
-                <table >
-                    <tr>
-                        <th>Transaction ID</th>
-                        <th>Store ID</th>
-                        <th>User ID</th>
-                        <th>Date Started</th>
-                        <th>Status</th>
-                    </tr>
-                    <?php
-                    if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                            echo "<tr>";
-                            echo "<td>" . $row["transaction_id"] . "</td>";
-                            echo "<td>" . $row["store_id"] . "</td>";
-                            echo "<td>" . $row["user_id"] . "</td>";
-                            echo "<td>" . $row["date_started"] . "</td>";
-                            echo "<td>" . $row["status"] . "</td>";
-                            echo "</tr>";
+                <div class="transactiontable-container">
+                    <table>
+                        <tr>
+                            <th>Transaction ID</th>
+                            <th>Store ID</th>
+                            <th>User ID</th>
+                            <th>Date Started</th>
+                            <th>Status</th>
+                        </tr>
+                        <?php
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<tr>";
+                                echo "<td>" . $row["transaction_id"] . "</td>";
+                                echo "<td>" . $row["store_id"] . "</td>";
+                                echo "<td>" . $row["user_id"] . "</td>";
+                                echo "<td>" . $row["date_started"] . "</td>";
+                                echo "<td>" . $row["status"] . "</td>";
+                                echo "</tr>";
+                            }
+                        } else {
+                            echo "<tr><td colspan='5'>No transactions found</td></tr>";
                         }
-                    } else {
-                        echo "<tr><td colspan='5'>No transactions found</td></tr>";
-                    }
-                    ?>
-                </table>
+                        ?>
+                    </table>
+                </div>
             </div>
 
             <div class="crudContainer">
@@ -147,7 +148,8 @@ $result = $conn->query($sql);
         </div>
     </div>
 
-</body> 
+</body>
+
 </html>
 
 <?php
