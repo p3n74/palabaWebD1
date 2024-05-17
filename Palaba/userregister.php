@@ -1,7 +1,7 @@
 <?php
-$dbusername = "user2";
+$dbusername = "root";
 $dbhost = "localhost";
-$dbpassword = "password123";
+$dbpassword = "";
 $dbname = "PalabaDB";
 
 $conn = new mysqli($dbhost, $dbusername, $dbpassword, $dbname);
