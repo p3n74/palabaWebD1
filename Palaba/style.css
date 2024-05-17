@@ -290,7 +290,7 @@ h1 {
   font-size: 47px;
 }
 
-.button {
+.HomeLoginbutton {
   margin-top: 68px;
   margin-left: 89px;
   width: 150px;
@@ -374,6 +374,10 @@ h1 {
   
   text-decoration: none;
   color: #0F2043;
+}
+
+.logsplash{
+  
 }
 
 body {
