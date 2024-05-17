@@ -41,8 +41,8 @@ body {
     position: fixed;
   top: 30%;
   left: 59%;
-    
   }
+  /* */
   .loginbox2 {
     position: absolute;
     top: 27%;
@@ -291,7 +291,7 @@ h1 {
   font-size: 47px;
 }
 
-.HomeLoginbutton {
+.HomeLoginBoxButton {
   margin-top: 68px;
   margin-left: 89px;
   width: 150px;
@@ -380,8 +380,22 @@ h1 {
   color: #0F2043;
 }
 
-.logsplash{
-  
+.LoginSplash{
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+}
+
+#LoginSplashText{
+  font-family: 'Just Me Again Down Here';
+  font-style: normal;
+  font-size: 30px;
+  color: #0F2043;
+  position: absolute;
+  text-align: center;
+  margin-left: 25%;
 }
 
 body {
