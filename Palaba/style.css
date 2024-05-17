@@ -1,103 +1,103 @@
-
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(255,248,233,1);
-  }
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(255, 248, 233, 1);
+}
 
 
 .header {
-    padding: 22px;
-    background: rgba(232,175,48,1);
-    
-  }
+  padding: 22px;
+  background: rgba(232, 175, 48, 1);
+
+}
 
 .navbar {
-    padding: 22px;
-    background: rgba(15,32,67,1);
-   
-   
+  padding: 22px;
+  background: rgba(15, 32, 67, 1);
+  text-align: center;
 }
 
 .navbar a {
-    color: rgba(232,175,48,1);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
+  color: rgba(232, 175, 48, 1);
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
-  .pic {
-    width: 492px;
-    height: 521px;
-    position: fixed;
+.pic {
+  width: 492px;
+  height: 521px;
+  position: fixed;
   top: 29%;
   left: 10%;
-    
-  }
 
-  .picin {
-    width: 492px;
-    height: 521px;
-    position: fixed;
+}
+
+.picin {
+  width: 492px;
+  height: 521px;
+  position: fixed;
   top: 30%;
   left: 59%;
-  }
-  /* */
-  .loginbox2 {
-    position: absolute;
-    top: 27%;
-    right: 50%;
-    width: 573px;
-    height: 500px;
-    background: rgba(231, 230, 221, 1);
-    border-radius: 20px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-left: 30%;
-    overflow: visible;
-  }
-  .regbox {
-    position: absolute;
-    margin-top: 50px; 
-    
-    width: 50%;
-    height: 550px;
-    background: rgba(231, 230, 221, 1);
-    border-radius: 20px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-left: 25%;
-    overflow: visible;
-  }
+}
 
-  
-  .trackcon {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-column-gap: 20px;
-    padding: 51px;
-    overflow: visible;
-    
-  }
+/* */
+.loginbox2 {
+  position: absolute;
+  top: 27%;
+  right: 50%;
+  width: 573px;
+  height: 500px;
+  background: rgba(231, 230, 221, 1);
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-left: 30%;
+  overflow: visible;
+}
+
+.regbox {
+  position: absolute;
+  margin-top: 50px;
+
+  width: 50%;
+  height: 550px;
+  background: rgba(231, 230, 221, 1);
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-left: 25%;
+  overflow: visible;
+}
 
 
-  hr {
-    width: 95%;
-    margin-top: -20px;
-  }
-  
-  .grid-container {
-
-    padding: 51px;
-    overflow: visible;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+.trackcon {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   grid-column-gap: 20px;
-  }
-  .prof {
-    overflow: visible;
-    position: fixed;
-    top: 20%;
-    left: 43%;
-  }
+  padding: 51px;
+  overflow: visible;
+
+}
+
+
+hr {
+  width: 95%;
+  margin-top: -20px;
+}
+
+.grid-container {
+
+  padding: 51px;
+  overflow: visible;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+}
+
+.prof {
+  overflow: visible;
+  position: fixed;
+  top: 20%;
+  left: 43%;
+}
 
 .notif {
   width: 93%;
@@ -107,6 +107,7 @@ body {
   background: #0F2043;
   border-radius: 10px 10px 10px 10px;
 }
+
 .create {
   width: 10%;
   height: 60px;
@@ -115,6 +116,7 @@ body {
   background: #0F2043;
   border-radius: 10px 10px 10px 10px;
 }
+
 .view {
   width: 10%;
   height: 45px;
@@ -126,7 +128,7 @@ body {
   position: absolute;
 }
 
-.viewtext{
+.viewtext {
   color: #0F2043;
   margin-left: 13%;
   margin-top: 7%;
@@ -135,7 +137,7 @@ body {
   font-size: larger;
 }
 
-.createte{
+.createte {
   width: 93%;
   height: 75px;
   margin-top: 40px;
@@ -145,7 +147,7 @@ body {
   overflow: visible;
 }
 
-.creatext{
+.creatext {
   color: #E8C766;
   margin-left: 3%;
   margin-top: 1.8%;
@@ -162,87 +164,89 @@ body {
   font-size: larger;
 }
 
-.notiftext{
+.notiftext {
   color: #E8C766;
   margin-left: 3%;
   margin-top: 1.2%;
   overflow: visible;
   position: absolute;
 }
-  .profbox {
-    position: absolute;
-    top: 58%;
-    left: 31%;
-    width: 650px;
-    height: 280px;
-    background: rgba(231, 230, 221, 1);
-    border-radius: 20px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-right: 30%;
-    overflow: visible;
-  }
 
-  .profname {
-    margin-left: 49%;
-    margin-top: 19%;
-    font-size: larger;
-  }
+.profbox {
+  position: absolute;
+  top: 58%;
+  left: 31%;
+  width: 650px;
+  height: 280px;
+  background: rgba(231, 230, 221, 1);
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-right: 30%;
+  overflow: visible;
+}
 
-  hr {
-    border-width: 2px;
-  }
-  .homebox {
+.profname {
+  margin-left: 49%;
+  margin-top: 19%;
+  font-size: larger;
+}
 
-    position: absolute;
-    top: 20%;
-    left: 7%;
-    width: 85%;
-    height: 74%;
-    background: rgba(231, 230, 221, 1);
-    border-radius: 20px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    z-index: 1;
-  }
+hr {
+  border-width: 2px;
+}
 
-  .loginbox {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    width: 600px;
-    height: 500px;
-    background: rgba(231, 230, 221, 1);
-    border-radius: 20px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-right: 30%;
-    overflow: visible;
-  }
+.homebox {
+
+  position: absolute;
+  top: 20%;
+  left: 7%;
+  width: 85%;
+  height: 74%;
+  background: rgba(231, 230, 221, 1);
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+.loginbox {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 600px;
+  height: 500px;
+  background: rgba(231, 230, 221, 1);
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-right: 30%;
+  overflow: visible;
+}
 
 /*log 1 is for the yellow part of the box */
-  .log1 {
-    height: 60px;
-    background: #E8C766;
-    border-radius: 20px 20px 0px 0px;
-    overflow: visible;
+.log1 {
+  height: 60px;
+  background: #E8C766;
+  border-radius: 20px 20px 0px 0px;
+  overflow: visible;
 
-  }
+}
 
-  .des{
-    position: fixed;
-    top: 30%;
-    
-  }
+.des {
+  position: fixed;
+  top: 30%;
 
-  .deslog{
-    position: fixed;
-    top: 30%;
-    left: 57%;
-  }
+}
 
-  .deslog1 {
-    position: fixed;
-    left: 40%;
-    top: -10%;
-    z-index: -1;
+.deslog {
+  position: fixed;
+  top: 30%;
+  left: 57%;
+}
+
+.deslog1 {
+  position: fixed;
+  left: 40%;
+  top: -10%;
+  z-index: -1;
 }
 
 .deslog2 {
@@ -251,41 +255,42 @@ body {
 
 }
 
-  .des1 {
-    position: fixed;
-    left: 78%;
-    top: -20%;
-    z-index: -1;
+.des1 {
+  position: fixed;
+  left: 78%;
+  top: -20%;
+  z-index: -1;
 }
 
 .des2 {
-    position: fixed;
-    left: 78%;
-    top: 40%;
+  position: fixed;
+  left: 78%;
+  top: 40%;
 
 }
 
 .title {
-font-family: 'Just Me Again Down Here';
-font-style: normal;
-font-size: 95px;
-color: #0F2043;
-padding-left: 20px;
-margin-top: -75px;
-position: absolute;
+  font-family: 'Just Me Again Down Here';
+  font-style: normal;
+  font-size: 95px;
+  color: #0F2043;
+  padding-left: 20px;
+  margin-top: -75px;
+  position: absolute;
 
 }
+
 .titles {
   font-family: 'Just Me Again Down Here';
-font-style: normal;
-font-size: 95px;
-color: #0F2043;
-margin-top: -75px;
-position: absolute;
-text-align: center;
-padding-left: 43%;
-  
-  }
+  font-style: normal;
+  font-size: 95px;
+  color: #0F2043;
+  margin-top: -75px;
+  position: absolute;
+  text-align: center;
+  padding-left: 43%;
+
+}
 
 h1 {
   padding-left: 50px;
@@ -296,34 +301,31 @@ h1 {
 
 
 .sform {
-  width: 600px;
-  padding: 20px; 
-  overflow: visible;
-  margin-bottom: 0;
+  padding: 20px;
 }
 
 .sform input[type="text"],
 .sform input[type="password"] {
-  width: 90%;
+  width: 100%;
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid  #0F2043;
+  border: 1px solid #0F2043;
   border-radius: 5px;
   box-sizing: border-box;
-
 }
 
 .nota {
-  margin-left: 20%;
-  
+  margin: 20px;
   text-decoration: none;
   color: #0F2043;
 }
-.for { 
-  margin-left: 9%;
+
+.for {
+  margin: 20px;
   text-decoration: none;
   color: #0F2043;
 }
+
 /* button for custlog and login supposedly */
 .button2 {
   margin-top: 8%;
@@ -331,7 +333,7 @@ h1 {
   width: 150px;
   height: 50px;
   color: white;
-  background-color: #0F2043; 
+  background-color: #0F2043;
   border: none;
   border-radius: 5px;
   font-family: 'Inter';
@@ -349,7 +351,7 @@ h1 {
   width: 150px;
   height: 50px;
   color: white;
-  background-color: #0F2043; 
+  background-color: #0F2043;
   border: none;
   border-radius: 5px;
   font-family: 'Inter';
@@ -362,7 +364,7 @@ h1 {
 
 .notas {
   margin-left: 40%;
-  
+
   text-decoration: none;
   color: #0F2043;
 }
@@ -370,7 +372,7 @@ h1 {
 .HomeLoginBoxButton {
   width: 150px;
   height: 50px;
-  background-color: #0F2043; 
+  background-color: #0F2043;
   border: none;
   border-radius: 5px;
   font-family: 'Inter';
@@ -383,7 +385,7 @@ h1 {
 .HomeLoginBoxUserRegistrationButton {
   width: 250px;
   height: 50px;
-  background-color: #0F2043; 
+  background-color: #0F2043;
   border: none;
   border-radius: 5px;
   font-family: 'Inter';
@@ -432,14 +434,14 @@ body {
 }
 
 .column {
-      display: flex;
-      align-items: center;
-      margin: auto;
+  display: flex;
+  align-items: center;
+  margin: auto;
 
 }
 
 .popup {
-font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -485,13 +487,13 @@ font-family: Arial, sans-serif;
 
 }
 
-.businessregisterbutton{
-  
+.businessregisterbutton {
+
   margin-left: 30%;
   width: 150px;
   height: 50px;
   color: white;
-  background-color: #0F2043; 
+  background-color: #0F2043;
   border: none;
   border-radius: 5px;
   font-family: 'Inter';
@@ -502,10 +504,11 @@ font-family: Arial, sans-serif;
   text-decoration: none;
 }
 
-.BusinessRegistrationInputBox{
+.BusinessRegistrationInputBox {
   height: 20px;
   width: 20px;
 }
+
 .row {
   display: flex;
 }
