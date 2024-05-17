@@ -379,3 +379,13 @@ h1 {
 body {
   background-size: cover;
 }
+
+.column {
+  flex: 1;
+      padding: 10px;
+
+}
+
+.row {
+  display: flex;
+}
