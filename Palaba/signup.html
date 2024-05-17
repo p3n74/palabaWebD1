@@ -27,16 +27,14 @@
             <div class="row">
                 <div class="column">
                     <form id="userform" class="sform" method="POST" action="./userregister.php">
-                        <input type="text" id="signupUsernameInputbox" name="usernameInput" placeholder="Userame"><br>
-                        <input type="text" id="signupFullnameInputbox" name="fullnameInput" placeholder="Full Name"><br>
-                        <input type="text" id="signupBirthdateInputbox" name="birthdateInput"
-                            placeholder="Birthdate"><br>
-                        <input type="text" id="signupEmailInputBox" name="emailInput" placeholder="Email address"><br>
-                        <input type="text" id="signupPhoneInputBox" name="phone" placeholder="Contact no."><br>
+                        <input type="text" id="signupUsernameInputbox" name="usernameInput" placeholder="Username" required><br>
+                        <input type="text" id="signupFullnameInputbox" name="fullnameInput" placeholder="Full name" required><br>
+                        <input type="text" id="signupEmailInputBox" name="emailInput" placeholder="Email address" required><br>
+                        <input type="text" id="signupPhoneInputBox" name="phone" placeholder="Contact number" required><br>
                         <input type="password" id="signupPasswordInputBox" name="passwordInput"
-                            placeholder="Password"><br>
+                            placeholder="Password" required><br>
                         <input type="password" id="signupConfirmPasswordBox" name="confirmpasswordInput"
-                            placeholder="Confirm Password" style="margin-bottom: 0;"><br>
+                            placeholder="Confirm password" style="margin-bottom: 0;" required><br>
                     </form>
                     <!-- </div>
              <div class="column">
