@@ -1,58 +1,73 @@
 <?php
-// Check if the form is submitted for insertion or deletion
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Database credentials
-    $dbusername = "user2";
-    $dbhost = "localhost";
-    $dbpassword = "password123";
-    $dbname = "PalabaDB";
+$dbusername = "user2";
+$dbhost = "localhost";
+$dbpassword = "password123";
+$dbname = "PalabaDB";
 
-    // Create connection
-    $conn = new mysqli($dbhost, $dbusername, $dbpassword, $dbname);
+// Establish connection
+$conn = new mysqli($dbhost, $dbusername, $dbpassword, $dbname);
 
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    // Handle deletion
-    if (isset($_POST['deleteTransaction'])) {
-        $transaction_id = $_POST['crudTransactionID'];
-        $deleteTransactionQuery = "DELETE FROM transactions WHERE transaction_id = '$transaction_id'";
-
-        if ($conn->query($deleteTransactionQuery) === TRUE) {
-            echo "<script>alert('Transaction deleted successfully.');</script>";
-        } else {
-            echo "Error: " . $deleteTransactionQuery . "<br>" . $conn->error;
-        }
-    }
-
-    // Handle insertion
-    if (isset($_POST['createTransaction'])) {
-        $username = $_POST['crudUsernameInput'];
-        $status = $_POST['crudOrderStatus'];
-        $getUserIDQuery = "SELECT user_id FROM users WHERE username = '$username'";
-        $result = $conn->query($getUserIDQuery);
-
-        if ($result->num_rows > 0) {
-            $row = $result->fetch_assoc();
-            $user_id = $row["user_id"];
-            $insertTransactionQuery = "INSERT INTO transactions (store_id, user_id, date_started, status) 
-                                       VALUES (1, '$user_id', CURRENT_DATE(), '$status')"; // Assuming store ID is 1
-
-            if ($conn->query($insertTransactionQuery) === TRUE) {
-                echo "<script>alert('Transaction inserted successfully.');</script>";
-            } else {
-                echo "Error: " . $insertTransactionQuery . "<br>" . $conn->error;
-            }
-        } else {
-            echo "<script>alert('User not found.');</script>";
-        }
-    }
-
-    // Close connection
-    $conn->close();
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+
+// Handle create transaction
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['createTransaction'])) {
+    $username = $_POST['crudUsernameInput'];
+    $status = $_POST['crudOrderStatus'];
+    
+    // Fetch user ID by username
+    $getUserIDQuery = "SELECT user_id FROM users WHERE username = '$username'";
+    $result = $conn->query($getUserIDQuery);
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $user_id = $row["user_id"];
+        
+        // Insert transaction
+        $insertTransactionQuery = "INSERT INTO transactions (store_id, user_id, date_started, status) 
+                                   VALUES (1, '$user_id', CURRENT_DATE(), '$status')"; // Assuming store ID is 1
+
+        if ($conn->query($insertTransactionQuery) === TRUE) {
+            echo "<script>alert('Transaction created successfully.');</script>";
+        } else {
+            echo "Error: " . $insertTransactionQuery . "<br>" . $conn->error;
+        }
+    } else {
+        echo "<script>alert('User not found.');</script>";
+    }
+}
+
+// Handle delete transaction
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['deleteTransaction'])) {
+    $transaction_id = $_POST['crudUserIdInput'];
+    $deleteTransactionQuery = "DELETE FROM transactions WHERE transaction_id = '$transaction_id'";
+
+    if ($conn->query($deleteTransactionQuery) === TRUE) {
+        echo "<script>alert('Transaction deleted successfully.');</script>";
+    } else {
+        echo "Error: " . $deleteTransactionQuery . "<br>" . $conn->error;
+    }
+}
+
+// Handle update transaction
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['updateTransaction'])) {
+    $transaction_id = $_POST['crudUserIdInput'];
+    $status = $_POST['crudOrderStatus'];
+    $updateTransactionQuery = "UPDATE transactions SET status = '$status' WHERE transaction_id = '$transaction_id'";
+
+    if ($conn->query($updateTransactionQuery) === TRUE) {
+        echo "<script>alert('Transaction updated successfully.');</script>";
+    } else {
+        echo "Error: " . $updateTransactionQuery . "<br>" . $conn->error;
+    }
+}
+
+// Fetch data from the transactions table
+$sql = "SELECT * FROM transactions";
+$result = $conn->query($sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -77,6 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </center>
     </div>
 
+
     <div class="wrapper">
         <div class="dashboardcontainer">
             <div class="dashboardbox">
@@ -84,61 +100,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <span class="title">Palaba</span>
                 </div>
             </div>
-            <div class="table">
-                <?php
-                // Database credentials
-                $dbusername = "user2";
-                $dbhost = "localhost";
-                $dbpassword = "password123";
-                $dbname = "PalabaDB";
 
-                // Create connection
-                $conn = new mysqli($dbhost, $dbusername, $dbpassword, $dbname);
-
-                // Check connection
-                if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                }
-
-                // SQL query to select transactions for store ID 1
-                $sql = "SELECT * FROM transactions WHERE store_id = 1";
-                $result = $conn->query($sql);
-
-                if ($result->num_rows > 0) {
-                    echo "<table border='1'>
+            <div class="transactiontable-container">
+                <table >
                     <tr>
-                    <th>Transaction ID</th>
-                    <th>Store ID</th>
-                    <th>User ID</th>
-                    <th>Date Started</th>
-                    <th>Status</th>
-                    </tr>";
-
-                    // Output data of each row
-                    while($row = $result->fetch_assoc()) {
-                        echo "<tr>";
-                        echo "<td>" . $row['transaction_id'] . "</td>";
-                        echo "<td>" . $row['store_id'] . "</td>";
-                        echo "<td>" . $row['user_id'] . "</td>";
-                        echo "<td>" . $row['date_started'] . "</td>";
-                        echo "<td>" . $row['status'] . "</td>";
-                        echo "</tr>";
+                        <th>Transaction ID</th>
+                        <th>Store ID</th>
+                        <th>User ID</th>
+                        <th>Date Started</th>
+                        <th>Status</th>
+                    </tr>
+                    <?php
+                    if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            echo "<tr>";
+                            echo "<td>" . $row["transaction_id"] . "</td>";
+                            echo "<td>" . $row["store_id"] . "</td>";
+                            echo "<td>" . $row["user_id"] . "</td>";
+                            echo "<td>" . $row["date_started"] . "</td>";
+                            echo "<td>" . $row["status"] . "</td>";
+                            echo "</tr>";
+                        }
+                    } else {
+                        echo "<tr><td colspan='5'>No transactions found</td></tr>";
                     }
-                    echo "</table>";
-                } else {
-                    echo "0 results";
-                }
-
-                $conn->close();
-                ?>
+                    ?>
+                </table>
             </div>
 
             <div class="crudContainer">
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" id="crudForm">
                     <div class="input-group">
+                        <input type="text" name="crudUserIdInput" placeholder="Transaction ID" class="input-field">
                         <input type="text" name="crudUsernameInput" placeholder="Username" class="input-field">
                         <input type="text" name="crudOrderStatus" placeholder="Status" class="input-field">
-                        <input type="text" name="crudTransactionID" placeholder="Transaction ID"> 
                     </div>
                     <div class="button-group">
                         <button type="submit" class="btn create-btn" name="createTransaction">Create</button>
@@ -147,11 +142,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                 </form>
             </div>
+
+
         </div>
     </div>
 
-    <script>
+</body> 
+</html>
 
-        document.querySelector('#crudForm').addEventListener('submit', function(event) {
-            var table = document.querySelector('.table table');
-            if (event
+<?php
+$conn->close();
+?>

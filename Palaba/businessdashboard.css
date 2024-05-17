@@ -1,8 +1,9 @@
-.table {
-    margin: 0 auto; /* Center the table horizontally */
-    text-align: center; /* Center the content of the table cells */
-    width: 80%; /* Set a width for the table */
+
+.transaction-container {
+    display: flex;
+    justify-content: center;
 }
+
 
 .container {
     display: flex;
